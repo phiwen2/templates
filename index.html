@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="login_page">
+            <div class="form">
+                <form class="register">
+                    <input type="text" name="name" placeholder="Name"><br><br>
+
+                    <input type="text" name="email" placeholder="Email"><br><br>
+                    <span class="mail-err"></span>
+                    <input type="text" name="username" placeholder="Username"><br><br>
+                    <span class="username-err"></span>
+                    <input type="text" name="password" placeholder="Password"><br><br>
+                    <span class="password-err"></span>
+                    <input type="text" name="cfm-password" placeholder="Confirm Password"><br><br>
+                    <span class="cfm-password-err"></span>
+
+                    <button type="button" name="Create">Create</button>
+                    <p class="message">Already Registered? <a href="#">Login</a> </p>
+                </form>
+                <form class="login">
+                    <h2>Sign in</h2>
+                    <input type="text" name="logUserName" placeholder="Username"> <br><br>
+                    <input type="text" name="logPassword" placeholder="Password"> <br><br>
+                    <span class="err"></span>
+                    <button type="button" name="Login">Login</button>
+                    <p class="message">Not Registered? <a href="#">Register</a></p>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src='https://code.jquery.com/jquery-3.4.1.min.js'>
+    </script>
+    <script>
+        $('.message a').click(function() {
+            $('form').animate({
+                height: "toggle",
+                opacity: "toggle"
+            }, "slow");
+        });
+    </script>
+
+</body>
+
+</html>
